@@ -90,7 +90,7 @@ addToCartButtons.forEach(function (button) {
     var productCard = button.closest('.card1, .card2, .card3, .card4');
     var productName = ((_a = productCard.querySelector('h4')) === null || _a === void 0 ? void 0 : _a.textContent) || '';
     var productPrice = parseFloat(((_c = (_b = productCard.querySelector('p:nth-of-type(2)')) === null || _b === void 0 ? void 0 : _b.textContent) === null || _c === void 0 ? void 0 : _c.replace('$', '')) || '0');
-    var stock = parseInt(productCard.dataset.stock || '3', 10); // Assume stock is 3 initially
+    var stock = parseInt(productCard.dataset.stock || '3', 10); 
     button.addEventListener('click', function () {
         if (stock > 0) {
             addToCart(productName, productPrice, stock, button);
