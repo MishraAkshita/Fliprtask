@@ -28,7 +28,7 @@ function updateCart() {
             if (cart[index].quantity < cart[index].stock) {
                 cart[index].quantity++;
                 updateCart();
-                alert("".concat(cart[index].name, " quantity increased!")); // Alert when quantity is increased
+                alert("".concat(cart[index].name, " quantity increased!")); 
             }
             else {
                 alert("".concat(cart[index].name, " is out of stock!"));
@@ -65,7 +65,7 @@ function addToCart(productName, productPrice, stock, button) {
             if (cart[i].quantity < cart[i].stock) {
                 cart[i].quantity++;
                 updateCart();
-                alert("".concat(productName, " quantity increased!")); // Alert when quantity is increased
+                alert("".concat(productName, " quantity increased!")); 
             }
             else {
                 alert("".concat(productName, " is out of stock!"));
@@ -76,7 +76,7 @@ function addToCart(productName, productPrice, stock, button) {
     // If the product is not in the cart, add it
     if (!productInCart) {
         cart.push({ name: productName, price: productPrice, stock: stock, quantity: 1 });
-        alert("".concat(productName, " is added to cart!")); // Alert when a new product is added
+        alert("".concat(productName, " is added to cart!")); 
         updateCart();
     }
     // Disable button if stock becomes 0
